@@ -1,5 +1,10 @@
 package base;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -27,8 +32,12 @@ public class MyInteger_Test {
 	}
 
 	@Test
-	public void test() {
-		assertTrue(1==1);
+	public void testiseven() {
+		int IntTest = 1;
+		MyInteger instance = new MyInteger(IntTest);
+		boolean bExpectedresult = false;
+		boolean bActualresult = instance.isEven();
+		assertEquals("testisEven() has failed", bExpectedresult, bActualresult);
 	}
 
 }
